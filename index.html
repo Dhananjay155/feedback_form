@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(#9198e5,#e42525 );
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: flex;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #138b23;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Feedback Form</h1>
+    <div class="container" style="background-color: rgb(247, 241, 241);">
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="feedbackType">Feedback Type:</label>
+                <select id="feedbackType" name="feedbackType">
+                    <option value="Compliment">Compliment</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="websiteRating">Website Rating:</label><br>
+                <div style="display: flex">
+                    <label><input type="radio" id="excellent" name="websiteRating" value="Excellent ">Excellent</label>
+                    <label><input type="radio" id="good" name="websiteRating" value="Good ">Good</label>
+                    <label><input type="radio" id="average" name="websiteRating" value="Average ">Average</label>
+                    <label><input type="radio" id="poor" name="websiteRating" value="Poor ">Poor</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age (10-100):</label>
+                <input type="number" id="age" name="age" min="10" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password (min. 8 characters):</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="websiteURL">Website URL (optional):</label>
+                <input type="url" id="websiteURL" name="websiteURL">
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
